@@ -1,0 +1,38 @@
+{
+  "app_name": "PaperLens - Academic Research Paper Extractor & Architecture Mapper",
+  "assignment": "Assignment 1 - Vibe Coded Research Paper Agent",
+  "platform": "Google AI Studio (Build Mode)",
+  "model": "gemini-2.5-flash",
+  "prompting_techniques": [
+    "Role / Persona Prompting",
+    "Chain-of-Thought (CoT) Prompting",
+    "Few-Shot Prompting"
+  ],
+  "operational_constraints": {
+    "max_token_budget": 25000,
+    "core_summary_word_limit": 300,
+    "student_project_ideas_count": 3
+  },
+  "reasoning_pipeline": [
+    {
+      "step": 1,
+      "stage": "Core Concept Extraction",
+      "output": "Plain-language summary (<300 words) of problem statement, primary methodology, and key mathematical/algorithmic breakthroughs."
+    },
+    {
+      "step": 2,
+      "stage": "Architectural Flowchart (Mermaid.js)",
+      "output": "Syntactically valid Mermaid.js top-down graph (graph TD) mapping data inputs, model layers, and outputs."
+    },
+    {
+      "step": 3,
+      "stage": "Future Work & Internship Opportunities",
+      "output": "3 actionable 3rd-year CS student project extensions with exact extension, targeted performance metric, and recommended tech stack."
+    },
+    {
+      "step": 4,
+      "stage": "Paper Metadata",
+      "output": "Metadata: Citations: INT, Authors: STRING, Publication: STRING, Year: 4 digit INT"
+    }
+  ]
+}
